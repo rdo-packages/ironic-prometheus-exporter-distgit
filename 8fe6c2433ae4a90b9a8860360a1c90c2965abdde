@@ -48,6 +48,57 @@
     },
     {
       "key": {
+        "uuid": "3a6da162_f446d7e9",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2019-06-06T08:03:48Z",
+      "side": 1,
+      "message": "you could define a variable in the preamble instead of hardcoding the date, and combine it with the rest, something like:\n\n%define build_timestamp %(date +\"%Y%m%d\")\n\nRelease: %{build_timestamp}git%{shortcommit}%{?dist}",
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f87e91e_6465297f",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2019-06-06T08:03:48Z",
+      "side": 1,
+      "message": "this should have the same min version as specified for Requires",
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a00b60d8_aeb1934b",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2019-06-06T08:03:48Z",
+      "side": 1,
+      "message": "this is actually a duplicate of L59, you can use that one and specify the min version there",
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7d42138e_dab3a9c2",
         "filename": "python-ironic-prometheus-exporter.spec",
         "patchSetId": 3
@@ -64,6 +115,29 @@
         "startChar": 0,
         "endLine": 56,
         "endChar": 32
+      },
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "882b5b24_f0378114",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2019-06-06T08:03:48Z",
+      "side": 1,
+      "message": "nit: OpenStack",
+      "range": {
+        "startLine": 64,
+        "startChar": 18,
+        "endLine": 64,
+        "endChar": 27
       },
       "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
