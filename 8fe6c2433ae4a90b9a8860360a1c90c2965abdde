@@ -113,6 +113,24 @@
     },
     {
       "key": {
+        "uuid": "2abb20ce_896b2d18",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 625
+      },
+      "writtenOn": "2019-06-06T08:26:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a6da162_f446d7e9",
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f87e91e_6465297f",
         "filename": "python-ironic-prometheus-exporter.spec",
         "patchSetId": 3
@@ -130,6 +148,24 @@
     },
     {
       "key": {
+        "uuid": "f0d16872_52e54b4a",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 625
+      },
+      "writtenOn": "2019-06-06T08:26:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9f87e91e_6465297f",
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a00b60d8_aeb1934b",
         "filename": "python-ironic-prometheus-exporter.spec",
         "patchSetId": 3
@@ -141,6 +177,24 @@
       "writtenOn": "2019-06-06T08:03:48Z",
       "side": 1,
       "message": "this is actually a duplicate of L59, you can use that one and specify the min version there",
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c33237f6_8fba3d9a",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 625
+      },
+      "writtenOn": "2019-06-06T08:26:58Z",
+      "side": 1,
+      "message": "Removing L59",
+      "parentUuid": "a00b60d8_aeb1934b",
       "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
@@ -205,6 +259,30 @@
       "writtenOn": "2019-06-06T08:03:48Z",
       "side": 1,
       "message": "nit: OpenStack",
+      "range": {
+        "startLine": 64,
+        "startChar": 18,
+        "endLine": 64,
+        "endChar": 27
+      },
+      "revId": "8fe6c2433ae4a90b9a8860360a1c90c2965abdde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b1bc717_c87bdc89",
+        "filename": "python-ironic-prometheus-exporter.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 625
+      },
+      "writtenOn": "2019-06-06T08:26:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "882b5b24_f0378114",
       "range": {
         "startLine": 64,
         "startChar": 18,
