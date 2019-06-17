@@ -55,6 +55,7 @@ Requires: python%{pyver}-oslo-messaging >= 9.4.0
 Requires: python%{pyver}-flask >= 0.12.3
 Requires: python%{pyver}-prometheus_client >= 0.6.0
 Requires: python%{pyver}-oslo-config
+Requires: python%{pyver}-configparser
 
 
 %description -n python%{pyver}-%{library}
