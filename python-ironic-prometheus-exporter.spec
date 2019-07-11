@@ -88,3 +88,4 @@ PYTHON=%{pyver_bin} stestr-%{pyver} --test-path $OS_TEST_PATH run
 %exclude %{pyver_sitelib}/%{module}/tests
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic-prometheus-exporter/commit/?id=41ee7fd6da3a472f1bc49eb72d314487e5f1bc04
