@@ -21,9 +21,9 @@ Version:    XXX
 Release:    XXX
 Summary:    ironic-prometheus-exporter provides a way to export hardware sensor data from ironic project in OpenStack to Prometheus
 License:    ASL 2.0
-URL:        https://github.com/metal3-io/ironic-prometheus-exporter
+URL:        https://opendev.org/openstack/ironic-prometheus-exporter
 
-Source0:    https://github.com/metal3-io/ironic-prometheus-exporter/archive/%{commit}/%{library}-%{shortcommit}.tar.gz
+Source0:    https://tarballs.openstack.org/%{library}/%{library}-%{upstream_version}.tar.gz
 
 BuildArch:  noarch
 
@@ -67,7 +67,7 @@ Application to export the metrics to Prometheus. It can be used not only in
 metal3 but in any OpenStack deployment which includes Ironic service.
 
 %prep
-%autosetup -n %{module}-%{upstream_version} -S git
+%autosetup -n %{library}-%{upstream_version} -S git
 
 %build
 %{pyver_build}
