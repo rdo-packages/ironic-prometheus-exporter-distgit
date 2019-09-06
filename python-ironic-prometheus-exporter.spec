@@ -52,7 +52,7 @@ Summary:    ironic-prometheus-exporter provides a way to export hardware sensor 
 Requires: python%{pyver}-pbr
 Requires: python%{pyver}-stevedore >= 1.20.0
 Requires: python%{pyver}-oslo-messaging >= 9.4.0
-Requires: python%{pyver}-flask >= 0.12.3
+Requires: python%{pyver}-flask >= 1.0.0
 Requires: python%{pyver}-prometheus_client >= 0.6.0
 Requires: python%{pyver}-oslo-config
 %if %{pyver} == 2
