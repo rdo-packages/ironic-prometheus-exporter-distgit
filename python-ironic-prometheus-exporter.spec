@@ -17,8 +17,8 @@
 
 
 Name:       python-%{library}
-Version:    XXX
-Release:    XXX
+Version:    1.0.0
+Release:    1%{?dist}
 Summary:    ironic-prometheus-exporter provides a way to export hardware sensor data from ironic project in OpenStack to Prometheus
 License:    ASL 2.0
 URL:        https://opendev.org/openstack/ironic-prometheus-exporter
@@ -88,3 +88,6 @@ PYTHON=%{pyver_bin} stestr-%{pyver} --test-path $OS_TEST_PATH run
 %exclude %{pyver_sitelib}/%{module}/tests
 
 %changelog
+* Wed Sep 25 2019 RDO <dev@lists.rdoproject.org> 1.0.0-1
+- Update to 1.0.0
+
