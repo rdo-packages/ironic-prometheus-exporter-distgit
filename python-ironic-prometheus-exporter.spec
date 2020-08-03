@@ -38,12 +38,11 @@ metal3 but in any OpenStack deployment which includes Ironic service.
 Summary:    ironic-prometheus-exporter provides a way to export hardware sensor data from ironic project in openstack to Prometheus
 %{?python_provide:%python_provide python3-%{library}}
 
-Requires: python3-pbr
-Requires: python3-stevedore >= 1.20.0
-Requires: python3-oslo-messaging >= 9.4.0
 Requires: python3-flask >= 1.0.0
+Requires: python3-oslo-messaging >= 9.4.0
+Requires: python3-pbr >= 3.1.1
 Requires: python3-prometheus_client >= 0.6.0
-Requires: python3-oslo-config
+Requires: python3-stevedore >= 1.20.0
 
 %description -n python3-%{library}
 ironic-prometheus-exporter provides a way to export hardware sensor data from
