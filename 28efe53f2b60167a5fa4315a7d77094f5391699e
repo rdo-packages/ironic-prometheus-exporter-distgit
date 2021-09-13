@@ -1,0 +1,9 @@
+Code-Review+2: Iury Gregory Melo Ferreira <iurygregory@gmail.com>
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Yatin Karel <ykarel@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 13 Sep 2021 10:54:13 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-prometheus-exporter-distgit/+/35511
+Project: openstack/ironic-prometheus-exporter-distgit
+Branch: refs/heads/xena-rdo
