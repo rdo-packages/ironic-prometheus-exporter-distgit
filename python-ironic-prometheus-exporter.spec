@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xa63ea142678138d1bb15f2e303bdfd64dd164087
 
 %global library ironic-prometheus-exporter
 %global module ironic_prometheus_exporter
@@ -8,8 +8,8 @@
 
 
 Name:       python-%{library}
-Version:    XXX
-Release:    XXX
+Version:    4.0.0
+Release:    1%{?dist}
 Summary:    ironic-prometheus-exporter provides a way to export hardware sensor data from ironic project in OpenStack to Prometheus
 License:    ASL 2.0
 URL:        https://opendev.org/openstack/ironic-prometheus-exporter
@@ -90,3 +90,6 @@ PYTHON=%{__python3} stestr-3 --test-path $OS_TEST_PATH run
 %exclude %{python3_sitelib}/%{module}/tests
 
 %changelog
+* Tue Sep 13 2022 RDO <dev@lists.rdoproject.org> 4.0.0-1
+- Update to 4.0.0
+
