@@ -5,13 +5,15 @@
 %global module ironic_prometheus_exporter
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order
 
 
 Name:       python-%{library}
 Version:    XXX
 Release:    XXX
 Summary:    ironic-prometheus-exporter provides a way to export hardware sensor data from ironic project in OpenStack to Prometheus
-License:    ASL 2.0
+License:    Apache-2.0
 URL:        https://opendev.org/openstack/ironic-prometheus-exporter
 
 Source0:    https://tarballs.openstack.org/%{library}/%{library}-%{upstream_version}.tar.gz
@@ -30,15 +32,7 @@ BuildRequires:  openstack-macros
 %endif
 
 BuildRequires:  python3-devel
-BuildRequires:  python3-setuptools
-# test dependencies
-BuildRequires: python3-pbr
-BuildRequires: python3-oslotest
-BuildRequires: python3-stestr
-BuildRequires: python3-oslo-config
-BuildRequires: python3-prometheus_client >= 0.6.0
-BuildRequires: python3-oslo-messaging >= 9.4.0
-BuildRequires: python3-oslo-messaging-tests
+BuildRequires:  pyproject-rpm-macros
 
 %description
 ironic-prometheus-exporter provides a way to export hardware sensor data from
@@ -49,13 +43,6 @@ metal3 but in any OpenStack deployment which includes Ironic service.
 
 %package -n  python3-%{library}
 Summary:    ironic-prometheus-exporter provides a way to export hardware sensor data from ironic project in openstack to Prometheus
-%{?python_provide:%python_provide python3-%{library}}
-
-Requires: python3-flask >= 1:1.0.0
-Requires: python3-oslo-messaging >= 9.4.0
-Requires: python3-pbr >= 3.1.1
-Requires: python3-prometheus_client >= 0.6.0
-Requires: python3-stevedore >= 1.20.0
 
 %description -n python3-%{library}
 ironic-prometheus-exporter provides a way to export hardware sensor data from
@@ -71,22 +58,39 @@ metal3 but in any OpenStack deployment which includes Ironic service.
 %endif
 %autosetup -n %{library}-%{upstream_version} -S git
 
+sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
+sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs};do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+%generate_buildrequires
+%pyproject_buildrequires -t -e %{default_toxenv}
+
 %build
-%{py3_build}
+%pyproject_wheel
 
 %install
-%{py3_install}
+%pyproject_install
 
 %check
 export OS_TEST_PATH='./ironic_prometheus_exporter/tests'
 %if 0%{?rhel} >= 7
-PYTHON=%{__python3} stestr-3 --test-path $OS_TEST_PATH run
+%tox -e %{default_toxenv}
 %endif
 
 %files -n python3-%{library}
 %license LICENSE
 %{python3_sitelib}/%{module}
-%{python3_sitelib}/%{module}-*.egg-info
+%{python3_sitelib}/%{module}-*.dist-info
 %exclude %{python3_sitelib}/%{module}/tests
 
 %changelog
