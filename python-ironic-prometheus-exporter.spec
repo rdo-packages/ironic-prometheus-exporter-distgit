@@ -10,7 +10,7 @@
 
 
 Name:       python-%{library}
-Version:    4.2.0
+Version:    4.2.1
 Release:    1%{?dist}
 Summary:    ironic-prometheus-exporter provides a way to export hardware sensor data from ironic project in OpenStack to Prometheus
 License:    Apache-2.0
@@ -95,6 +95,9 @@ export OS_TEST_PATH='./ironic_prometheus_exporter/tests'
 %exclude %{python3_sitelib}/%{module}/tests
 
 %changelog
+* Thu Sep 21 2023 RDO <dev@lists.rdoproject.org> 4.2.1-1
+- Update to 4.2.1
+
 * Mon Sep 04 2023 RDO <dev@lists.rdoproject.org> 4.2.0-1
 - Update to 4.2.0
 
