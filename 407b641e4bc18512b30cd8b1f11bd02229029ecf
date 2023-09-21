@@ -1,0 +1,8 @@
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 21 Sep 2023 13:44:04 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-prometheus-exporter-distgit/+/50140
+Project: openstack/ironic-prometheus-exporter-distgit
+Branch: refs/heads/bobcat-rdo
