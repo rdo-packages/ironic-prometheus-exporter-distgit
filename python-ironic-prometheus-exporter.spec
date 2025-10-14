@@ -97,3 +97,4 @@ export OS_TEST_PATH='./ironic_prometheus_exporter/tests'
 %exclude %{python3_sitelib}/%{module}/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic-prometheus-exporter/commit/302fecca1daa227701c3dae9fdbe99f7a87b1111
